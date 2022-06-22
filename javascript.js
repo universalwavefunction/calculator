@@ -38,4 +38,13 @@ function operate(operator, num1, num2) {
   if (operator == '/') {return divide(num1, num2)}
 }
 
-console.log(operate('/', 10, 23))
+let display_value = [];
+var display = document.getElementById("display");
+
+let numbers = document.querySelectorAll('.number-button');
+numbers.forEach((button) => {
+  button.addEventListener('click', () => {
+    display_value.push(button.innerHTML);
+    display.innerHTML = display_value;
+  })
+})
