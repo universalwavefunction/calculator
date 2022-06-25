@@ -77,10 +77,8 @@ operators.forEach((button) => {
     if (display_value.length > 0) {
       firstNumber = display_value.join('');
       allNumbers.push(firstNumber); }
-      console.log(firstNumber, allNumbers, allNumbers.length)
     if (allNumbers.length == 2) {
       let sum = operate(operator, ...allNumbers);
-      console.log(sum, firstNumber, allNumbers, allNumbers.length)
       allNumbers = [sum]
       display.innerHTML = sum;
     }
@@ -108,4 +106,10 @@ clear.addEventListener('click', () => {
   display_value = []
   allNumbers = []
   display.innerHTML = 0
+})
+
+let backspace = document.querySelector('.backspace-button')
+backspace.addEventListener('click', () => {
+  display_value.pop();
+  display.innerHTML = display_value.join('');
 })
