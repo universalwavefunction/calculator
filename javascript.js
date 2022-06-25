@@ -77,9 +77,16 @@ operators.forEach((button) => {
     if (display_value.length > 0) {
       firstNumber = display_value.join('');
       allNumbers.push(firstNumber); }
+      console.log(firstNumber, allNumbers, allNumbers.length)
+    if (allNumbers.length == 2) {
+      let sum = operate(operator, ...allNumbers);
+      console.log(sum, firstNumber, allNumbers, allNumbers.length)
+      allNumbers = [sum]
+      display.innerHTML = sum;
+    }
     display_value = [];
     operator = button.innerHTML;
-    display.innerHTML = operator;
+    //display.innerHTML = operator;
   })
 })
 
