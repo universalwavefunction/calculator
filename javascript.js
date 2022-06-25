@@ -101,14 +101,14 @@ equals.addEventListener('click', () => {
   }
 })
 
-let clear = document.querySelector('.clear-button')
+let clear = document.querySelector('#clear-button')
 clear.addEventListener('click', () => {
   display_value = []
   allNumbers = []
   display.innerHTML = 0
 })
 
-let backspace = document.querySelector('.backspace-button')
+let backspace = document.querySelector('#backspace-button')
 backspace.addEventListener('click', () => {
   display_value.pop();
   display.innerHTML = display_value.join('');
